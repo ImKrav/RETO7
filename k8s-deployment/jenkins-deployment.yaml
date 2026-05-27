@@ -22,12 +22,12 @@ spec:
             claimName: jenkins-pv-claim
       containers:
         - name: jenkins
-          image: <dockerhub-user>/jenkins-controller-kaniko
+          image: imkrav/jenkins-controller-kaniko
           env:
             - name: JENKINS_ADMIN_ID
               value: admin
             - name: JENKINS_ADMIN_PASSWORD
-              value: <jenkins-admin-pass>
+              value: admin
           ports:
             - containerPort: 8080
             - containerPort: 50000
